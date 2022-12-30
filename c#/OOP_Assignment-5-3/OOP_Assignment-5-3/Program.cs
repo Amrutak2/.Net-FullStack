@@ -26,6 +26,22 @@ namespace OOP_Assignment_5_3
                 Console.WriteLine(emp);
             }
             Console.WriteLine("List Contains " + li.Count + " Employees");
+            Console.WriteLine("Enter the name of the employee you want to search");
+            string searchName = Console.ReadLine();
+            bool found = false;
+
+            foreach (Employee e in li)
+            {
+                if (e.name.Equals(searchName, StringComparison.OrdinalIgnoreCase))
+                {
+                    found = true;
+                }
+                else
+                {
+                    found = false;
+                }
+            }
+            Console.WriteLine(found == true ? "Employee found." : "No record found.");
         }
     }
 }
