@@ -1,0 +1,3 @@
+Customer Name:Abhi
+Account Number:580
+Balance:6700
