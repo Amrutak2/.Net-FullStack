@@ -1,0 +1,14 @@
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\bin\Debug\netcoreapp3.1\OOP_Assignment_7-4.exe
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\bin\Debug\netcoreapp3.1\OOP_Assignment_7-4.deps.json
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\bin\Debug\netcoreapp3.1\OOP_Assignment_7-4.runtimeconfig.json
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\bin\Debug\netcoreapp3.1\OOP_Assignment_7-4.runtimeconfig.dev.json
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\bin\Debug\netcoreapp3.1\OOP_Assignment_7-4.dll
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\bin\Debug\netcoreapp3.1\OOP_Assignment_7-4.pdb
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\obj\Debug\netcoreapp3.1\OOP_Assignment_7-4.csproj.AssemblyReference.cache
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\obj\Debug\netcoreapp3.1\OOP_Assignment_7-4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\obj\Debug\netcoreapp3.1\OOP_Assignment_7-4.AssemblyInfoInputs.cache
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\obj\Debug\netcoreapp3.1\OOP_Assignment_7-4.AssemblyInfo.cs
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\obj\Debug\netcoreapp3.1\OOP_Assignment_7-4.csproj.CoreCompileInputs.cache
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\obj\Debug\netcoreapp3.1\OOP_Assignment_7-4.dll
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\obj\Debug\netcoreapp3.1\OOP_Assignment_7-4.pdb
+C:\Github\.Net-FullStack\c#\OOP_Assignment_7-4\OOP_Assignment_7-4\obj\Debug\netcoreapp3.1\OOP_Assignment_7-4.genruntimeconfig.cache
