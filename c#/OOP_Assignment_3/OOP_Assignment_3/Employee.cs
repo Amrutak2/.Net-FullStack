@@ -9,6 +9,7 @@ namespace OOP_Assignment_3
         public void DisplayEmpDetails();
 
     }
+    [Serializable]
     class Employee :IPrintable
     {
         private int EmpNo;
@@ -118,6 +119,7 @@ namespace OOP_Assignment_3
             //Console.WriteLine("The Emp Id is  " + EMPNO + " The Emp Name is " + EMPNAME + " The Emp Salary is " + SALARY + " The Emp HRA is " + HRA + " The Emp TA is " + TA + " The Emp DA is " + DA + " The Emp PF is " + PF + " The Emp TDS is " + TDS + " The Emp Netsalary is " + NETSALARY + " The Emp gross salary is " + GROSSSALARY);
         }
     }
+    [Serializable]
     class Manager : Employee, IPrintable
     {
         private double petrolAllowance;
@@ -159,6 +161,7 @@ namespace OOP_Assignment_3
             Console.WriteLine("Net Salary of manager is " + NETSALARY);
         }
     }
+    [Serializable]
     class MarketingExecutive: Employee, IPrintable
     {
         double kmsTravel;
