@@ -59,6 +59,8 @@ update OrderItem set UnitPrice = 15 where OrderId = 103
 update OrderItem set UnitPrice = 12 where OrderId = 101
 select * from OrderItem;
 
+Assignment 03:
+
 1. select * from Orders where CustomerId = (select Id from Customer where Phone = '030-0074321');
 
 alter table Product add Category nvarchar(40);
