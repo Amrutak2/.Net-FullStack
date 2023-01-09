@@ -5,6 +5,12 @@ insert into Customer values(3, 'Srishti', 'Patil', 'Dallas', 'America', '8877990
 insert into Customer values(4, 'Raksha', 'Gujrathi', 'seoul', 'Korea', '8876591122' );
 insert into Customer values(5, 'Shiny', 'Majumdar', 'Sydney', 'Australia', '030-0074321' );
 insert into Customer values(6, 'Shirley', 'William', 'London', 'UK', '7722991123');
+insert into Customer values(7, 'Ruchika', 'Mali', 'Paris', 'France', '7214991429', '');
+
+alter table Customer add FaxNumber nvarchar(10);
+update Customer set Country = 'Germany', City='Berlin' where Id = 4;
+update Customer set FaxNumber = '4210' where Id = 1;
+update Customer set FaxNumber = '3219' where Id = 4;
 
 Select * from Customer
 
@@ -49,9 +55,11 @@ insert into OrderItem values(15, 104, 204, 349.00, 6);
 insert into OrderItem values(16, 103, 205, 50.00, 6);
 delete from OrderItem where ProductId = 205;
 
+update OrderItem set UnitPrice = 15 where OrderId = 103
+update OrderItem set UnitPrice = 12 where OrderId = 101
 select * from OrderItem;
 
-select * from Orders where CustomerId = (select Id from Customer where Phone = '030-0074321');
+1. select * from Orders where CustomerId = (select Id from Customer where Phone = '030-0074321');
 
 alter table Product add Category nvarchar(40);
 update Product set Category = 'Refreshing Drink' where Id = '201';
@@ -61,9 +69,9 @@ update Product set Category = 'Seafood', ProductName = 'Fish' where Id = '204';
 update Product set Category = 'Refreshing Drink' where Id = '203';
 update Product set Package = 'Lays' where Id = '200';
 
-select * from Product where Category = 'Seafood';
-Select * from Orders inner join Customer on Orders.CustomerId = Customer.id where Customer.City!='London';
-select * from OrderItem where ProductId = (Select Id from Product where ProductName ='Chai');
+2. select * from Product where Category = 'Seafood';
+3. Select * from Orders inner join Customer on Orders.CustomerId = Customer.id where Customer.City!='London';
+4.select * from OrderItem where ProductId = (Select Id from Product where ProductName ='Chai');
 
 Create table Employee(
 FirstName nvarchar(40),
@@ -79,4 +87,13 @@ insert into Employee values('Rutuja', 'Thombre','Civil', 'Rashmi', 5, 26000);
 insert into Employee values('Nikita', 'Punde','Entc', 'Rashmi', 5, 35000);
 insert into Employee values('Gauri', 'Devahdrao','Civil', 'Rashmi', 6, 22000);
 
-select * from Employee;
+5. select * from Employee;
+
+2nd Assignment:
+
+1. select * from Customer where Country = 'Germany';
+2. select concat(FirstName,' ',LastName) AS FullName from Employee;
+3. select * from Customer where FaxNumber Is Not Null;
+4. select * from Customer where FirstName like '_u%'
+5. select * from OrderItem where UnitPrice Between 10 AND 20
+6. 
