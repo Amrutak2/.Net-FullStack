@@ -1,3 +1,5 @@
+1st Assignment:
+
 create table Customer(
 Id int Primary key,
 FirstName nvarchar(40),
@@ -49,14 +51,11 @@ update Customer set Country = 'Germany', City='Berlin' where Id = 4;
 update Customer set FaxNumber = '4210' where Id = 1;
 update Customer set FaxNumber = '3219' where Id = 4;
 
-Select * from Customer
+5. Select * from Customer
 
-Select Country from Customer
-where Country like 'A%' OR Country like 'I%'
-order by Country
+6. Select Country from Customer where Country like 'A%' OR Country like 'I%' order by Country
 
-select FirstName from Customer
-where FirstName like '__i%'
+7. select FirstName from Customer where FirstName like '__i%'
 
 
 insert into Orders values(100, '2020/10/23 10:21:43:121', 5, 1, 749.00 )
