@@ -1,0 +1,202 @@
+﻿@model RollOff.Models.Roll
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@*<h1>Edit</h1>*@
+
+<h4>Roll-Off & Feedback Form </h4>
+
+<hr />
+
+
+
+
+
+    <div class="container  d-inline-block p-auto">
+        <form class="d-inline-flex justify-content-around align-items-center " asp-action="Edit">
+            <div class="container  d-inline-block ">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="EmployeeNo" />
+
+                @*<div class="container m-2 d-inline-block" style="width:40%;">
+            <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">
+                @Html.DisplayNameFor(model => model.Name) :
+                </div>
+            <div class="font-weight-bold d-inline-block">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+        </div>*@
+
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="Name" class="control-label">Name</label>
+                    <input asp-for="Name" class="form-control" disabled/>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group font-weight-bold">
+                    <label asp-for="LocalGrade" class="control-label" ></label>
+                    <input asp-for="LocalGrade" class="form-control" disabled />
+                    <span asp-validation-for="LocalGrade" class="text-danger"></span>
+                </div>
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="PrimarySkill" class="control-label" ></label>
+                    <input asp-for="PrimarySkill" class="form-control" />
+                    <span asp-validation-for="PrimarySkill" class="text-danger"></span>
+                </div>
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="ProjectCode" class="control-label"></label>
+                    <input asp-for="ProjectCode" class="form-control" disabled />
+                    <span asp-validation-for="ProjectCode" class="text-danger"></span>
+                </div>
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="ProjectName" class="control-label"></label>
+                    <input asp-for="ProjectName" class="form-control" disabled/>
+                    <span asp-validation-for="ProjectName" class="text-danger"></span>
+                </div>
+                </div>
+            <div class="container d-inline-block">
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="Practice" class="control-label"></label>
+                    <input asp-for="Practice" class="form-control" disabled/>
+                    <span asp-validation-for="Practice" class="text-danger"></span>
+                </div>
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="RollOffEndDate" class="control-label"></label>
+                    <input asp-for="RollOffEndDate" class="form-control" />
+                    <span asp-validation-for="RollOffEndDate" class="text-danger"></span>
+                </div>
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="ReasonForRollOff" class="control-label"></label>
+                    <select asp-for="ReasonForRollOff"class="form-control">
+                        <option Value="Project Closure">Project Closure</option>
+                        <option Value="Maternity Leave">Maternity Leave</option>
+                        <option Value="Resigned">Resigned</option>
+                        <option Value="Performance Issue">Performance Issue</option>
+                        <option Value="HR Case"> HR Case</option>
+                        <option Value="People Skill">People Skill</option>
+                        <option Value="Automation">Automation</option>
+                        <option Value="Quality"> Quality</option>
+                        <option Value="New Delivery Model">New Delivery Model</option>
+                        <option Value="Labour(Work Force Productivity)">Labour(Work Force Productivity)</option>
+                        <option Value="Client Budget Issue">Client Budget Issue</option>
+                        <option Value="Other Reason">Other Reason</option>
+                    </select>
+                    @*<input asp-for="ReasonForRollOff" class="form-control" />*@
+                    <span asp-validation-for="ReasonForRollOff" class="text-danger"></span>
+                </div>
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="OtherReason" class="control-label"></label>
+                    <input asp-for="OtherReason" class="form-control" />
+                    <span asp-validation-for="OtherReason" class="text-danger"></span>
+                </div>
+                <div class="form-group font-weight-bold ">
+                    <label asp-for="ThisReleaseNeedsBackfillIsBackfilled" class="control-label"></label>
+                    @*<input asp-for="ThisReleaseNeedsBackfillIsBackfilled" class="form-control" />*@
+                    <select asp-for="ThisReleaseNeedsBackfillIsBackfilled" class="form-control">
+                        <option value="--select--">--select--</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <span asp-validation-for="ThisReleaseNeedsBackfillIsBackfilled" class="text-danger"></span>
+                </div>
+                </div>
+                <div class="container d-inline-block">
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="PerformanceIssue" class="control-label"></label>
+                        @*<input asp-for="PerformanceIssue" class="form-control" />*@
+                        <select asp-for="PerformanceIssue" class="form-control">
+                            <option value="--select--">--select--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <span asp-validation-for="PerformanceIssue" class="text-danger"></span>
+                    </div>
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="Resigned" class="control-label"></label>
+                        @*<input asp-for="Resigned" class="form-control" />*@
+                        <select asp-for="Resigned" class="form-control">
+                            <option value="--select--">--select--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <span asp-validation-for="Resigned" class="text-danger"></span>
+                    </div>
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="UnderProbation" class="control-label"></label>
+                        @*<input asp-for="UnderProbation" class="form-control" />*@
+                        <select asp-for="UnderProbation" class="form-control">
+                            <option value="--select--">--select--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <span asp-validation-for="UnderProbation" class="text-danger"></span>
+                    </div>
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="LongLeave" class="control-label"></label>
+                        @*<input asp-for="LongLeave" class="form-control" />*@
+                        <select asp-for="LongLeave" class="form-control">
+                            <option value="--select--">--select--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <span asp-validation-for="LongLeave" class="text-danger"></span>
+                    </div>
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="LeaveType" class="control-label"></label>
+                        @*<input asp-for="LongLeave" class="form-control" />*@
+                        <select asp-for="LeaveType" class="form-control">
+                            <option value="--select--">--select--</option>
+                            <option value="Privilege Leave">Privilege Leave</option>
+                            <option value="Casual Leave">Casual Leave</option>
+                            <option value="Maternity Leave">Maternity Leave</option>
+                            <option value="Sick Leave">Sick Leave</option>
+                            <option value="Paternity Leave">Paternity Leave</option>
+                        </select>
+                        <span asp-validation-for="LeaveType" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="container d-inline-block">
+                    @*<h1>Feedback</h1>*@
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="TechnicalSkills" class="control-label"></label>
+                        <input asp-for="TechnicalSkills" class="form-control" />
+                        <span asp-validation-for="TechnicalSkills" class="text-danger"></span>
+                    </div>
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="Communication" class="control-label"></label>
+                        <input asp-for="Communication" class="form-control" />
+                        <span asp-validation-for="Communication" class="text-danger"></span>
+                    </div>
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="RoleCompetencies" class="control-label"></label>
+                        <input asp-for="RoleCompetencies" class="form-control" />
+                        <span asp-validation-for="RoleCompetencies" class="text-danger"></span>
+                    </div>
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="Remarks" class="control-label"></label>
+                        <input asp-for="Remarks" class="form-control" />
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
+                    <div class="form-group font-weight-bold ">
+                        <label asp-for="RelevantExperienceYrs" class="control-label"></label>
+                        <input asp-for="RelevantExperienceYrs" class="form-control" />
+                        <span asp-validation-for="RelevantExperienceYrs" class="text-danger"></span>
+                    </div>
+                </div>
+
+</form>
+    </div>
+
+ 
+        <div class="d-flex justify-content-around align-items-center">
+            <input type="submit" value="Submit" class="btn btn-info" />
+        </div>
+    
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,182 @@
+﻿@model IEnumerable<RollOff.Models.SupplyDatum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h1>Index</h1>*@
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+
+@section Styles
+{
+    <style type="text/css">
+        table {
+           
+        }
+    </style>
+   
+}
+<center>
+    <form class="form-group" method="get" asp-action="Index">
+        <p>
+            <input class="form-control d-inline-block" type="search" placeholder="Enter Global group Id or Employee Name or Email" value="@ViewData["GetDetails"]"
+                   name="EmpSearch" style="width:400px;" />
+            <button class="btn btn-info">
+                <a class="d-inline-block" style="text-decoration: none; color: white;">Search</a>
+            </button>
+            @*<input class="d-inline-block btn btn-info" type="submit" value="Search" />*@
+            @*<a asp-action="Index">Back to list</a>*@
+        </p>
+    </form>
+</center>
+<div class="table-responsive ml-0 p-2 d-inline-block" style="width:85vw; height:70vh; overflow:scroll; border-collapse: collapse">
+
+    <table class="table-sm table-striped table-hover sortable" >
+        <thead class="sticky-top bg-info text-light ">
+            <tr style="font-size: 14px;">
+                <!--<th>
+                    <label  class="control-label">Country</label>-->
+                    @*@Html.DisplayNameFor(model => model.Country)*@
+                <!--</th>-->
+                <th>
+                    
+                    @Html.DisplayNameFor(model => model.GlobalGroupId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeNo)
+                </th>
+                <th>
+                    
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    
+                    @Html.DisplayNameFor(model => model.LocalGrade)
+                </th>
+                <!--<th>
+                    <label class="control-label">Main Client</label>-->
+                    @*@Html.DisplayNameFor(model => model.MainClient)*@
+                <!--</th>-->
+                <th>
+                    
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <!--<th>
+                    <label class="control-label">Joining Date</label>-->
+                    @*@Html.DisplayNameFor(model => model.JoiningDate)*@
+                <!--</th>-->
+                <!--<th>
+                    <label class="control-label">Project Code</label>-->
+                    @*@Html.DisplayNameFor(model => model.ProjectCode)*@
+                <!--</th>-->
+                <th>
+                    
+                    @Html.DisplayNameFor(model => model.ProjectName)
+                </th>
+                <!--<th>
+                    <label class="control-label">Project Start Date</label>-->
+                   @* @Html.DisplayNameFor(model => model.ProjectStartDate)*@
+                <!--</th>-->
+                <!--<th>
+                    <label class="control-label">Project End Date</label>-->
+                    @*@Html.DisplayNameFor(model => model.ProjectEndDate)*@
+                <!--</th>-->
+                <!--<th>
+                    <label class="control-label">People Manager Performance Reviewer</label>-->
+                   @* @Html.DisplayNameFor(model => model.PeopleManagerPerformanceReviewer)*@
+                <!--</th>-->
+                <th>
+                    
+                    @Html.DisplayNameFor(model => model.Practice)
+                </th>
+                <th>
+                    <label class="control-label">PSP Name</label>
+                    @*@Html.DisplayNameFor(model => model.PspName)*@
+                </th>
+                <!--<th>
+                    <label class="control-label">New Global Practice</label>-->
+                   @* @Html.DisplayNameFor(model => model.NewGlobalPractice)*@
+                <!--</th>-->
+                <th>
+                    
+                    @Html.DisplayNameFor(model => model.OfficeCity)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.GlobalGroupId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocalGrade)
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.MainClient)
+        </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelitem => item.JoiningDate.Value.ToShortDateString())
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelitem => item.ProjectCode)
+        </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectName)
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.ProjectStartDate.Value.ToShortDateString())
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectEndDate.Value.ToShortDateString())
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.PeopleManagerPerformanceReviewer)
+        </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Practice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PspName)
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.NewGlobalPractice)
+        </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.OfficeCity)
+                </td>
+                <td>
+                    @* <a asp-action="Edit" asp-route-id="@item.GlobalGroupId">Edit</a> |*@
+                    @* <button class="btn-outline-info text-dark"><a asp-action="Details" asp-route-id="@item.GlobalGroupId">Details</a> </button>*@
+                    <button class="btn btn-info">
+                        <a asp-action="Details" asp-route-id="@item.GlobalGroupId" style=" text-decoration:none; color:white;">Details</a>
+                    </button>
+                    @*<a asp-action="Delete" asp-route-id="@item.GlobalGroupId">Delete</a> |*@
+                    @*<a asp-controller="Rolls" asp-action="Edit" asp-route-id="@item.EmployeeNo">RollOff</a>*@
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+@*<div class="container ml-0 p-0 d-inline-block" style="width: 30vw;">
+        <h1>Requests</h1>
+    </div>*@

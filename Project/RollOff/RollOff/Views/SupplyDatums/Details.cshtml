@@ -1,0 +1,81 @@
+﻿@model RollOff.Models.SupplyDatum
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<center><h2>Employee Details</h2></center>
+<hr />
+
+
+   
+
+<div class="container">
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">
+            @Html.DisplayNameFor(model => model.Country) : 
+        </div> 
+        <div class="font-weight-bold d-inline-block"> 
+            @Html.DisplayFor(model => model.Country)
+        </div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.GlobalGroupId) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.GlobalGroupId)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.EmployeeNo) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.EmployeeNo)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.Name) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.Name)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.LocalGrade) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.LocalGrade)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.MainClient) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.MainClient)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.Email) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.Email)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.JoiningDate) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.JoiningDate)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.ProjectCode) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.ProjectCode)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.ProjectName) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.ProjectName)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.ProjectStartDate) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.ProjectStartDate)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.ProjectEndDate) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.ProjectEndDate)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.PeopleManagerPerformanceReviewer) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.PeopleManagerPerformanceReviewer)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.Practice) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.Practice)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.PspName) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.PspName)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.NewGlobalPractice) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.NewGlobalPractice)</div>
+    </div>
+    <div class="container m-2 d-inline-block" style="width:40%;">
+        <div class="font-weight-bold d-inline-block text-black-50 d-inline-block">@Html.DisplayNameFor(model => model.OfficeCity) : </div> <div class="font-weight-bold d-inline-block"> @Html.DisplayFor(model => model.OfficeCity)</div>
+    </div>
+    <div class="d-flex justify-content-around align-items-center">
+        <button class="btn btn-info">
+            <a asp-controller="Rolls" asp-action="Edit" asp-route-id="@Model.EmployeeNo" style=" text-decoration:none; color:white;">Roll Off</a>
+        </button>
+    </div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+    @*<div>
+        <a asp-controller="Rolls" asp-action="Edit" asp-route-id="@Model.EmployeeNo">Roll Off</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>*@
